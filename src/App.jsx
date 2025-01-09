@@ -1,12 +1,11 @@
-import React from 'react'
-import BootcampForm from './components/BootcampForm'
+import Review from "./components/Review";
+import WhySolp from "./components/WhySolp";
 
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <BootcampForm/>
-    </div>
+    <>
+      <WhySolp />
+      <Review />
+    </>
   )
 }
-
-export default App
