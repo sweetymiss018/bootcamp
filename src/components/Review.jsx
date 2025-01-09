@@ -30,44 +30,44 @@ const Review = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-green-200 py-12 flex flex-col gap-16">
       {/* Animated Header */}
       <div className="relative overflow-hidden mb-12">
         <div className="flex whitespace-nowrap">
           <motion.div
             animate={{
-              x: [0, -1000],
+              x: [0, -4000],
             }}
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 20,
+                duration: 5,
                 ease: "linear",
               },
             }}
-            className="flex items-center gap-2 text-4xl md:text-5xl font-bold"
+            className="flex items-center gap-7 text-4xl md:text-5xl font-bold"
           >
-            <span>Graduate Success Stories</span>
-            <span className="text-emerald-400">*</span>
-            <span>Graduate Success Stories</span>
-            <span className="text-emerald-400">*</span>
-            <span>Graduate Success Stories</span>
-            <span className="text-emerald-400">*</span>
-            <span>Graduate Success Stories</span>
-            <span className="text-emerald-400">*</span>
-            <span>Graduate Success Stories</span>
-            <span className="text-emerald-400">*</span>
+            <span className='text-[12rem]'>Graduate Success Stories</span>
+            <span className="text-emerald-400 text-[12rem]">*</span>
+            <span className='text-[12rem]'>Graduate Success Stories</span>
+            <span className="text-emerald-400 text-[12rem]">*</span>
+            <span className='text-[12rem]'>Graduate Success Stories</span>
+            <span className="text-emerald-400 text-[12rem]">*</span>
+            <span className='text-[12rem]'>Graduate Success Stories</span>
+            <span className="text-emerald-400 text-[12rem]">*</span>
+            <span className='text-[12rem]'>Graduate Success Stories</span>
+            <span className="text-emerald-400 text-[12rem]">*</span>
           </motion.div>
         </div>
       </div>
 
       {/* Testimonials Grid */}
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className=" mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-zinc-600  ">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className={`${testimonial.bgColor} rounded-3xl p-8 relative`}
+            className={`${testimonial.bgColor} rounded-3xl p-8 relative h-[650px] w-[700px] `}
           >
             <div className="mb-6">
               <p className="text-gray-700 text-lg leading-relaxed">
