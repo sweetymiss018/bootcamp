@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
+
 
 const BootcampForm = () => {
   const [formData, setFormData] = useState({
@@ -105,9 +107,9 @@ const BootcampForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-8">
+    <div className="min-h-screen bg-gradient-to-br bg-gray-50 p-8">
       <div className="w-full max-w-6xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row ">
           {/* Left side illustration */}
           <div className="md:w-1/2 bg-blue-50 p-8 flex flex-col justify-center items-center">
             <div className="relative w-full h-96">
@@ -136,117 +138,134 @@ const BootcampForm = () => {
           </div>
 
           {/* Right side form */}
-          <div className="md:w-1/2 p-12 bg-white">
-            <div className="text-center mb-8">
-              <h1 className="text-2xl font-bold text-gray-800">Step of Learning Process</h1>
-              <p className="text-gray-600">Bootcamp Registration</p>
-            </div>
+          <div className="md:w-1/2 p-6 bg-white">
+          <div className="text-center mb-6">
+      {/* Animated Main Title */}
+      <motion.h1
+        className="text-2xl font-bold text-gray-800 font-mono"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Step of Learning Process
+      </motion.h1>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name Field */}
-              <div className="transform transition-all duration-300 hover:-translate-y-1">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  onBlur={() => handleBlur('name')}
-                  className={getInputClasses('name')}
-                  placeholder="Enter your full name"
-                  required
-                />
-                {touched.name && errors.name && (
-                  <p className="text-red-500 text-sm mt-1 animate-shake">{errors.name}</p>
-                )}
-              </div>
+      {/* Animated Subtext */}
+      <motion.p
+        className="text-gray-600 mt-2 font-mono"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+      >
+        Bootcamp Registration
+      </motion.p>
+    </div>
+  <form onSubmit={handleSubmit} className="space-y-4">
+    {/* Name Field */}
+    <div className="transform transition-all duration-300 hover:-translate-y-1">
+      <label className="block text-sm font-medium text-gray-700 mb-1">
+        Full Name <span className="text-red-500">*</span>
+      </label>
+      <input
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        onBlur={() => handleBlur('name')}
+        className={getInputClasses('name')}
+        placeholder="Enter your full name"
+        required
+      />
+      {touched.name && errors.name && (
+        <p className="text-red-500 text-sm mt-1 animate-shake">{errors.name}</p>
+      )}
+    </div>
 
-              {/* Email Field */}
-              <div className="transform transition-all duration-300 hover:-translate-y-1">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  onBlur={() => handleBlur('email')}
-                  className={getInputClasses('email')}
-                  placeholder="Enter your email"
-                  required
-                />
-                {touched.email && errors.email && (
-                  <p className="text-red-500 text-sm mt-1 animate-shake">{errors.email}</p>
-                )}
-              </div>
+    {/* Email Field */}
+    <div className="transform transition-all duration-300 hover:-translate-y-1">
+      <label className="block text-sm font-medium text-gray-700 mb-1">
+        Email Address <span className="text-red-500">*</span>
+      </label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        onBlur={() => handleBlur('email')}
+        className={getInputClasses('email')}
+        placeholder="Enter your email"
+        required
+      />
+      {touched.email && errors.email && (
+        <p className="text-red-500 text-sm mt-1 animate-shake">{errors.email}</p>
+      )}
+    </div>
 
-              {/* Optional Fields */}
-              <div className="space-y-6 pt-4">
-                <p className="text-sm text-gray-500 italic">Optional Information</p>
-                
-                {/* Phone Field */}
-                <div className="transform transition-all duration-300 hover:-translate-y-1">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
+    {/* Optional Fields */}
+    <div className="space-y-4 pt-2">
+      <p className="text-sm text-gray-500 italic">Optional Information</p>
 
-                {/* Institution Field */}
-                <div className="transform transition-all duration-300 hover:-translate-y-1">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    University/College
-                  </label>
-                  <input
-                    type="text"
-                    name="institution"
-                    value={formData.institution}
-                    onChange={handleChange}
-                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your institution name"
-                  />
-                </div>
+      {/* Phone Field */}
+      <div className="transform transition-all duration-300 hover:-translate-y-1">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Phone Number
+        </label>
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Enter your phone number"
+        />
+      </div>
 
-                {/* Profession Field */}
-                <div className="transform transition-all duration-300 hover:-translate-y-1">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Profession
-                  </label>
-                  <input
-                    type="text"
-                    name="profession"
-                    value={formData.profession}
-                    onChange={handleChange}
-                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your profession"
-                  />
-                </div>
-              </div>
+      {/* Institution Field */}
+      <div className="transform transition-all duration-300 hover:-translate-y-1">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          University/College
+        </label>
+        <input
+          type="text"
+          name="institution"
+          value={formData.institution}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Enter your institution name"
+        />
+      </div>
 
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={!isFormValid}
-                className={`w-full p-3 rounded-md transition-all duration-300 transform
-                  bg-blue-500 text-white
-                  ${!isFormValid ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600 hover:-translate-y-1 animate-bounce'}
-                  ${isSubmitting ? 'animate-pulse' : ''}
-                  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`}
-              >
-                {isSubmitting ? 'Submitting...' : 'Submit Registration'}
-              </button>
-            </form>
-          </div>
+      {/* Profession Field */}
+      <div className="transform transition-all duration-300 hover:-translate-y-1">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Profession
+        </label>
+        <input
+          type="text"
+          name="profession"
+          value={formData.profession}
+          onChange={handleChange}
+          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Enter your profession"
+        />
+      </div>
+    </div>
+
+    {/* Submit Button */}
+    <button
+      type="submit"
+      disabled={!isFormValid}
+      className={`w-full p-2.5 rounded-md transition-all duration-300 transform
+        bg-blue-500 text-white
+        ${!isFormValid ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600 hover:-translate-y-1 animate-bounce'}
+        ${isSubmitting ? 'animate-pulse' : ''}
+        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`}
+    >
+      {isSubmitting ? 'Submitting...' : 'Submit Registration'}
+    </button>
+  </form>
+</div>
+
         </div>
       </div>
     </div>
