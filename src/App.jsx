@@ -7,7 +7,7 @@ import WhySolp from "./components/WhySolp";
 export default function App() {
   return (
     <>
-      <SOLPCodingExperience/>
+      {/* <SOLPCodingExperience/> */}
       <WhySolp />
       <Review />
       <CountdownTimer/>
