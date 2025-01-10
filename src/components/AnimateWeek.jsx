@@ -56,8 +56,8 @@ function AnimateWeek() {
   }, []);
 
   return (
-    <div ref={parentRef} className="h-[80vh] w-full flex flex-col lg:h-[80vh] md:h-[100vh] sm:h-[100vh] xs-lg:h-[100vh]">
-      <div className="counter-info h-[50%] w-full  flex lg:flex-row md:flex-col sm:flex-col xs-lg:flex-col ">
+    <div ref={parentRef} className="h-[100vh] w-full flex flex-col lg:h-[100vh] md:h-[100vh] sm:h-[100vh] xs-lg:h-[100vh]">
+      <div className="counter-info h-[60%] w-full  flex lg:flex-row md:flex-col sm:flex-col xs-lg:flex-col ">
         <div className="counter w-[50%] p-12 lg:w-[50%] md:w-full sm:w-full xs-lg:w-full">
           <CountdownTimer/>
         </div>
@@ -89,7 +89,7 @@ function AnimateWeek() {
           className="absolute sm:displ pink-box h-[95%] w-[50%]  lg:h-[95%] lg:w-[50%] md:h-[30%] md:w-[50%] sm:h-[20%] sm:w-[50%] xs-lg:h-[8%] bg-pink-300 right-7 sm:right-4 xs-lg:right-2 bottom-0 flex justify-center items-center p-[90px]"
           style={{ borderTopLeftRadius: "150px" }}
         >
-          <h1 className="text-8xl font-semibold text-amber-950 lg:text-8xl md:text-5xl sm:text-3xl xs-lg:text-2xl">
+          <h1 className="text-5xl font-semibold text-amber-950 lg:text-5xl md:text-5xl sm:text-3xl xs-lg:text-2xl">
             The SOLP Coding Experience
           </h1>
         </div>

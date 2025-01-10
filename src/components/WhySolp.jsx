@@ -60,7 +60,13 @@ const WhyNodSection = () => {
     <div  ref={containerRef} className="relative h-[250vh] w-full overflow-hidden  flex  justify-center lg:h-[200vh] md:h-[320vh] sm:h-[380vh] xs-lg:h-[280vh]   flex-col ">
       {/* Background Text */}
 
-      <h1 ref={headingRef} className='text-center text-9xl font-semibold text-amber-950 mb-9 lg:text-9xl md:text-8xl sm:text-8xl xs-lg:text-8xl'>WHY SOLP?</h1>
+      <h1 
+  ref={headingRef} 
+  className="text-center font-semibold text-amber-950 mb-9 
+             text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+  WHY SOLP?
+</h1>
+
       
 
       {/* Cards Grid */}
