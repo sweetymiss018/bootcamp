@@ -44,7 +44,7 @@ const ReviewHorizontalScroll = () => {
                 ease: "linear",
               },
             }}
-            className="flex items-center gap-7 text-2xl md:text-5xl font-bold"
+            className="flex items-center gap-7 text-2xl md:text-5xl font-bold  sm:h-[120px] xs-lg:h-[120px]"
           >
             <span className='text-[8rem]'>Graduate Success Stories</span>
             <span className="text-emerald-400 flex text-[12rem]">*</span>

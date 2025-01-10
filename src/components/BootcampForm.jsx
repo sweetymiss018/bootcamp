@@ -107,7 +107,7 @@ const BootcampForm = () => {
   };
 
   return (
-    <div className=" bg-gradient-to-br w-[800px] h-[900px]  p-8 ">
+    <div className=" bg-gradient-to-br w-[800px] h-[1200px]  p-8 ">
       <div className="w-full h-full max-w-6xl mx-auto b rounded-xl  overflow-hidden relative">
         <div className="flex flex-col md:flex-row ">
         
@@ -125,7 +125,7 @@ const BootcampForm = () => {
         Bootcamp Registration
       </motion.p>
     </div>
-  <form onSubmit={handleSubmit} className="space-y-4">
+  <form onSubmit={handleSubmit} className="  h-[600px] ">
     {/* Name Field */}
     <div className="transform transition-all duration-300 hover:-translate-y-1">
       <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -225,11 +225,11 @@ const BootcampForm = () => {
     <button
       type="submit"
       disabled={!isFormValid}
-      className={`absolute bottom-1 w-[30%] h-[55px] p-2.5 rounded-xl transition-all duration-300 transform
+      className={`absolute mt-7 w-[30%] h-[55px] p-2.5 rounded-xl transition-all duration-300 transform
         bg-amber-600 text-white
         ${!isFormValid ? 'opacity-50 cursor-not-allowed' : 'hover:bg-amber-950 hover:-translate-y-1 animate-bounce'}
         ${isSubmitting ? 'animate-pulse' : ''}
-        focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2`}
+        focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 `}
     >
       {isSubmitting ? 'Submitting...' : 'Submit Registration'}
     </button>

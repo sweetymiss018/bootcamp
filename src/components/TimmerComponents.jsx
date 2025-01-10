@@ -64,7 +64,7 @@ const CountdownTimer = () => {
   const formatNumber = (num) => num.toString().padStart(2, '0');
 
   return (
-    <div className=" h-auto  flex items-center justify-center p-4">
+    <div className=" h-auto  flex items-center justify-center p-4 ">
       <div
         className={`relative p-8 sm:p-12 rounded-3xl shadow-lg transform hover:scale-105 transition-all duration-500 bg-gray-300 ${getAnimationClasses()}`}
       >

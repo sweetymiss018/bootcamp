@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const TechStackSvg = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 716 627" width={716} height={627}>
@@ -27,29 +29,48 @@ const TechStackSvg = () => (
 
 const WhyNodSection = () => {
 
+  
+    const containerRef = useRef(null);
+    const headingRef = useRef(null);
+  
+    useEffect(() => {
+      const container = containerRef.current;
+      const heading = headingRef.current;
+  
+      gsap.fromTo(
+        heading,
+        { opacity: 0, y: 50 }, // Initial state
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: container,
+            start: "top 80%", // 20% into the viewport
+            end: "top 50%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }, []);
+
 
   return (
-    <div className="relative h-[200vh] w-full overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+    <div  ref={containerRef} className="relative h-[250vh] w-full overflow-hidden  flex  justify-center lg:h-[200vh] md:h-[320vh] sm:h-[380vh] xs-lg:h-[280vh]   flex-col ">
       {/* Background Text */}
-      <h1 
-        className="absolute left-1/2 -translate-x-1/2 text-[120px] font-bold text-[#000] select-none pointer-events-none z-0 whitespace-nowrap sm:text-[150px] lg:text-[200px]"
-        style={{
-          top: '50%',
-          transform: `translate(-50%, ${-50 + scrollY * 0.1}px)`,
-          opacity: 0.2
-        }}
-      >
-        Why Nod?
-      </h1>
+
+      <h1 ref={headingRef} className='text-center text-9xl font-semibold text-amber-950 mb-9 lg:text-9xl md:text-8xl sm:text-8xl xs-lg:text-8xl'>WHY SOLP?</h1>
+      
 
       {/* Cards Grid */}
-      <div className=" pt-20 w-[100vw]">
+      <div className="  w-[100vw]">
         <div className="flex flex-col w-full">
 
-          <div className="first-stack flex justify-center w-full  h-fit ">
+          <div className="first-stack flex justify-center w-full  h-fit lg:flex-row  md:flex-col sm:flex-col xs-lg:flex-col ">
                {/* State-of-the-art Tech Stack */}
 
-          <div className=" bg-[#FFE5B4] p-9  h-[600px] w-[800px]">
+          <div className=" bg-[#FFE5B4] p-9  h-[550px] w-[750px] lg:w-[800px] lg:h-[700px] md:w-full sm:w-full xs-lg:w-full flex flex-col justify-between">
           <h3 className="mb-4 text-7xl font-semibold text-amber-950">State-of-the-art Tech Stack</h3>
             <div className="mb-6   mx-auto h-[250px] w-full flex items-center justify-center">
               <TechStackSvg />
@@ -62,7 +83,7 @@ const WhyNodSection = () => {
 
           {/* Project Based Learning */}
 
-          <div className=" bg-[#FFB6C1] p-9  h-[600px] w-[800px] flex flex-col">
+          <div className=" bg-[#FFB6C1] p-9  h-[550px] w-[750px] flex flex-col lg:w-[800px] lg:h-[700px]  md:w-full sm:w-full xs-lg:w-full justify-between">
             <h3 className="mb-4 text-7xl font-semibold text-amber-950">Project Based Learning</h3>
               <div className="mb-6   mx-auto h-[250px] w-[250px] flex items-center justify-center bg-blue-400 ">
                 <svg className="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -78,9 +99,9 @@ const WhyNodSection = () => {
           
           </div>
 
-          <div className="second-stack flex justify-center w-full  h-fit">
+          <div className="relative second-stack flex justify-center w-full lg:left-[40px]  h-fit lg:flex-row md:flex-col sm:flex-col xs-lg:flex-col ">
               {/* Accelerated Onsite Learning */}
-          <div className=" ml-[90px]  bg-[#87CEEB] p-9  h-[600px] w-[750px]  flex flex-col">
+          <div className=" ml-[90px]  bg-[#87CEEB] p-9  h-[600px] w-[750px]  flex flex-col lg:w-[800px] lg:h-[700px]   md:w-full sm:w-full xs-lg:w-full md:ml-0 sm:ml-0 xs-lg:ml-0 justify-between">
            
             <h3 className=" mb-4 text-7xl font-semibold text-amber-950">Accelerated Onsite Learning</h3>
               <div className="flex mx-auto mb-6 h-[250px] w-[250px] items-center justify-center  bg-orange-400 p-4">
@@ -96,10 +117,10 @@ const WhyNodSection = () => {
           </div>
 
           {/* Get hired */}
-          <div className=" bg-[#98D8C8] p-8 h-[600px] w-[860px]">
+          <div className=" bg-[#98D8C8] p-8 h-[600px] w-[860px] lg:w-[800px] lg:h-[700px]  md:w-full sm:w-full xs-lg:w-full flex flex-col justify-between">
             
             <h3 className="mb-4 text-7xl font-semibold text-amber-950">Get hired</h3>
-              <div className="flex mx-auto mb-10 h-[250px] w-[250px] items-center justify-center  bg-green-400 p-4">
+              <div className="flex mx-auto mb-10 h-[250px] w-[250px] items-center justify-center  bg-green-400 p-4 ">
                 <svg className="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>

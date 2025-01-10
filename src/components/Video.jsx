@@ -72,9 +72,9 @@ function Video() {
   };
 
   return (
-    <div className="relative h-[100vh] w-full flex">
-      <div className="video-box w-[50%] h-full pr-7 pl-10">
-        <div className="box w-full h-[90%] bg-[#FFD37D] flex justify-center items-center">
+    <div className=" relative h-[100vh] xs-lg:h-[80vh] w-full flex lg:flex lg:flex-row md:flex-col sm:flex-col xs-lg:flex-col md:justify-center lg:justify-center sm:justify-center xs-lg:justify-center">
+      <div className=" video-box w-[50%] lg:w-[50%] lg:h-full   md:h-full sm:h-full xs-lg:h-[50%] sm:w-full xs-lg:w-full lg:pr-4 lg:pl-5 md:pr-0 md:pl-0 sm:pr-0 sm:pl-0 xs-lg:pr-0 xs-lg:pl-0">
+        <div className="box w-full h-[90%] md:h-[90%] sm:h-[60%] xs-lg:h-[100%] bg-[#FFD37D] flex justify-center items-center">
           <div
             ref={videoRef}
             className="video-container w-[75%] h-[75%] relative border border-black rounded-lg overflow-hidden"
@@ -92,13 +92,13 @@ function Video() {
           </div>
         </div>
       </div>
-      <div className="video-info flex items-center justify-center w-[50%] text-6xl">
-        <p className="w-[80%] text-amber-950 font-semibold">
+      <div className="video-info flex items-center justify-center w-[50%] lg:w-[50%] sm:w-full xs-lg:w-full lg:h-full  sm:h-[40%] xs-lg:h-[20%] text-6xl lg:text-6xl md:text-4xl sm:text-3xl xs-lg:text-2xl">
+        <p className="w-[80%] text-amber-950 font-semibold md:w-[80%] sm:w-[100%] xs-lg:w-[100%] pl-9 pr-9">
           Watch how this transformative learning experience will set you on a
           new path.
         </p>
       </div>
-      <div className="star-svg absolute left-[40.8%] top-[72%]">
+      <div className="star-svg absolute lg:left-[41.4%] lg:top-[72%] sm:top-[80%]">
       <svg
     version="1.1"
     id="Layer_1"

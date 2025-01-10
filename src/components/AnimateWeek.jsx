@@ -56,16 +56,16 @@ function AnimateWeek() {
   }, []);
 
   return (
-    <div ref={parentRef} className="h-[80vh] w-full flex flex-col">
-      <div className="counter-info h-[50%] w-full flex">
-        <div className="counter w-[50%] p-12">
+    <div ref={parentRef} className="h-[80vh] w-full flex flex-col lg:h-[80vh] md:h-[100vh] sm:h-[100vh] xs-lg:h-[100vh]">
+      <div className="counter-info h-[50%] w-full  flex lg:flex-row md:flex-col sm:flex-col xs-lg:flex-col ">
+        <div className="counter w-[50%] p-12 lg:w-[50%] md:w-full sm:w-full xs-lg:w-full">
           <CountdownTimer/>
         </div>
-        <div className="info w-[50%] p-12">
-          <h1 className="font-semibold text-5xl text-amber-950 ">
+        <div className="info w-[50%] p-12 lg:w-[50%] md:w-full sm:w-full xs-lg:w-full ">
+          <h1 className="font-semibold text-5xl text-amber-950 lg:text-5xl">
             To start a new career in Tech
           </h1>
-          <p className="mt-2 text-[28px] text-zinc-500">
+          <p className="mt-2 text-[28px] text-zinc-500 md:text-[24px] sm:text-[10px] xs-lg:text-[18px]">
             to start a new career in Tech Unlock the door to the future with
             hands-on skills in Python, the most user-friendly and versatile
             programming language. Build projects in Data Analytics, Machine
@@ -75,21 +75,21 @@ function AnimateWeek() {
         </div>
       </div>
 
-      <div className="relative blue-div pl-10 pr-10 h-[50%] w-full flex overflow-hidden">
+      <div className="relative blue-div pl-10 pr-10 sm:pl-5 sm:pr-5 xs-lg:pl-2 xs-lg:pr-2 h-[50%]  w-full flex overflow-hidden">
         <div
           ref={blueBoxRef}
-          className="absolute blue-box h-[50%] w-[50%] bg-blue-500 bottom-0 flex justify-center"
+          className="absolute blue-box h-[50%] w-[50%] lg:h-[50%] lg:w-[50%] md:h-[30%] md:w-[50%] sm:h-[20%] sm:w-[50%] xs-lg:h-[50px] bg-blue-500 bottom-0 flex justify-center"
         >
           <div
             ref={halfCircleRef}
-            className="half-circle h-[700px] w-[700px] relative rounded-full bg-blue-700 -top-[150px] -left-[40px]"
+            className="half-circle h-[700px] w-[700px] lg:h-[700px] lg:w-[700px] md:h-[400px] md:w-[400px] sm:h-[250px] sm:w-[250px] xs-lg:h-[120px] xs-lg:w-[120px]  relative rounded-full bg-blue-700 -top-[150px] md:-top-[50px] sm:-top-[4px] xs-lg:top-[-20px] -left-[40px] xs-lg:left-[-35px]"
           ></div>
         </div>
         <div
-          className="absolute pink-box h-[95%] w-[50%] bg-pink-300 right-7 bottom-0 flex justify-center items-center p-[90px]"
+          className="absolute sm:displ pink-box h-[95%] w-[50%]  lg:h-[95%] lg:w-[50%] md:h-[30%] md:w-[50%] sm:h-[20%] sm:w-[50%] xs-lg:h-[8%] bg-pink-300 right-7 sm:right-4 xs-lg:right-2 bottom-0 flex justify-center items-center p-[90px]"
           style={{ borderTopLeftRadius: "150px" }}
         >
-          <h1 className="text-8xl font-semibold text-amber-950">
+          <h1 className="text-8xl font-semibold text-amber-950 lg:text-8xl md:text-5xl sm:text-3xl xs-lg:text-2xl">
             The SOLP Coding Experience
           </h1>
         </div>

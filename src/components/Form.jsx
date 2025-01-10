@@ -4,6 +4,25 @@ import BootcampForm from "./BootcampForm";
 function Form() {
   const whitePathRef = useRef(null);
 
+  const svgDivRef = useRef(null);
+  const parentDivRef = useRef(null);
+  useEffect(() => {
+    // GSAP animation with ScrollTrigger
+    gsap.fromTo(
+      svgDivRef.current,
+      { scale: 0 }, // Start at scale 0
+      {
+        scale: 1, // End at scale 1
+        duration: 1.5,
+        ease: "elastic.out(1, 0.5)",
+        scrollTrigger: {
+          trigger: parentDivRef.current, // Trigger animation when parent div is in view
+          start: "center center", 
+          toggleActions: "play none none none", // Play animation once
+        },
+      }
+    );
+  }, []);
 
   useEffect(() => {
 
@@ -23,15 +42,16 @@ function Form() {
   }, []);
   
   return (
-    <div className="h-[150vh] w-full flex items-center justify-end">
+    <div   ref={parentDivRef}  className="h-[150vh] w-full flex  items-center justify-end sm:h-[150vh] xs-lg:h-[190vh] md:h-[150vh] lg:h-[150vh]">
       <div
-        className="yellow-div w-[89%] h-[80%] bg-[#FFD37D] flex "
+        className="yellow-div w-[89%] h-[98%] bg-[#FFD37D] flex lg:w-[89%] lg:h-[80%] md:w-[89%] md:h-[80%] sm:flex-col xs-lg:flex-col md:flex-row lg:flex-row sm:w-full xs-lg:w-full "
         style={{ borderBottomLeftRadius: "150px" }}
       >
-        <div className="form h-full w-[55%]  flex justify-center items-center">
+       
+        <div className="form relative h-full w-[55%]  flex justify-center items-center sm:h-[50%] xs-lg:h-[60%] sm:w-full xs-lg:w-full md:h-full lg:h-full md:top-[30px] sm:top-[30px] xs-lg:top-[30px] lg:top-[30px]">
           <BootcampForm/>
         </div>
-        <div className="svg h-full w-[45%] flex justify-end">
+        <div  ref={svgDivRef} className="svg h-full w-[45%] flex justify-end  lg:w-[45%]  sm:h-[50%] xs-lg:h-[40%] sm:w-full xs-lg:w-full md:h-full lg:h-full sm:mb-4 xs-lg:mb-4 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -270,6 +290,7 @@ function Form() {
             </g>
           </svg>
         </div>
+        
       </div>
     </div>
   );
