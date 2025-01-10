@@ -225,7 +225,7 @@ const BootcampForm = () => {
     <button
       type="submit"
       disabled={!isFormValid}
-      className={`absolute bottom-1 w-[50%] p-2.5 rounded-xl transition-all duration-300 transform
+      className={`absolute bottom-1 w-[30%] h-[55px] p-2.5 rounded-xl transition-all duration-300 transform
         bg-amber-600 text-white
         ${!isFormValid ? 'opacity-50 cursor-not-allowed' : 'hover:bg-amber-950 hover:-translate-y-1 animate-bounce'}
         ${isSubmitting ? 'animate-pulse' : ''}

@@ -1,5 +1,6 @@
 import AnimatedWeekCounter from "./components/AnimateWeek";
 import CodingAnimation from "./components/CodingAnimation";
+import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Review from "./components/Review";
 import Video from "./components/Video";
@@ -16,6 +17,7 @@ export default function App() {
       <WhySolp/>
      
       <Form/>
+      <Footer/>
     
     </>
   )

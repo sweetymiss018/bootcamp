@@ -214,9 +214,9 @@ export default function CodingAnimation() {
 
   return (
      <div className="h-[100vh] w-screen flex items-center justify-center bg-cyan-50 gap-16 overflow-hidden">
-      <div className="flowers relative w-full h-fit flex justify-center items-center">
+      <div className="flowers relative w-full  flex justify-center items-center ">
         {/* C Letter */}
-        <div className="c-letter-flower absolute top-1/2 left-[20%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px]">
+        <div className="c-letter-flower absolute top-1/2 left-[20%] lg:left-[20%]  md:left-[12%] sm:left-[18%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[300px] lg:h-[300px]  md:w-[200px] sm:w-[150px]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299 285" className="w-full h-full">
             <defs>
               <clipPath id="__lottie_element_45">
@@ -239,7 +239,7 @@ export default function CodingAnimation() {
         </div>
 
         {/* O Letter */}
-        <div className="o-letter-flower absolute top-1/2 left-[35%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px]">
+        <div className="o-letter-flower absolute top-1/2 left-[35%] lg:left-[35%]  md:left-[30%] sm:left-[35%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[300px] lg:h-[300px] md:w-[200px] sm:w-[150px]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 288" className="w-full h-full">
             <defs>
               <clipPath id="__lottie_element_55">
@@ -262,7 +262,7 @@ export default function CodingAnimation() {
         </div>
 
         {/* D Letter */}
-        <div className="d-letter-flower absolute top-1/2 left-[47%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px]">
+        <div className="d-letter-flower absolute top-1/2 left-[47%] lg:left[47%]  md:left-[45%] sm:left-[50%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[300px] lg:h-[300px] md:w-[200px] sm:w-[150px]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288" className="w-full h-full">
             <defs>
               <clipPath id="__lottie_element_11">
@@ -290,7 +290,7 @@ export default function CodingAnimation() {
         </div>
 
         {/* I Letter */}
-        <div className="i-letter-flower absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px]">
+        <div className="i-letter-flower absolute top-1/2 left-[60%] lg:left-[55%]  md:left-[58%] sm:left-[62%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[300px] lg:h-[300px] md:w-[200px] md:h-[200px] sm:w-[150px] sm:h-[150px]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83 284" className="w-full h-full">
             <defs>
               <clipPath id="__lottie_element_21">
@@ -313,7 +313,7 @@ export default function CodingAnimation() {
         </div>
 
         {/* N Letter */}
-        <div className="n-letter-flower absolute top-[53%] left-[70%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px]">
+        <div className="n-letter-flower absolute top-[53%] left-[70%] lg:left-[70%]  md:left-[72%] sm:left-[75%] -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[300px] lg:h-[300px] md:w-[200px] sm:w-[150px]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288" className="w-full h-full">
             <defs>
               <clipPath id="__lottie_element_28">
@@ -336,7 +336,7 @@ export default function CodingAnimation() {
         </div>
 
         {/* G Letter */}
-        <div className="g-letter-flower absolute top-[40%] left-[85%] -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px]">
+        <div className="g-letter-flower absolute top-[40%] left-[85%] lg:left-[85%]  md:left-[90%] sm:left-[90%] -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] lg:w-[400px] lg:h-[400px] md:w-[200px] sm:w-[150px]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 295 355" className="w-full h-full">
             <defs>
               <clipPath id="__lottie_element_35">
