@@ -107,55 +107,20 @@ const BootcampForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br bg-gray-50 p-8">
-      <div className="w-full max-w-6xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+    <div className=" bg-gradient-to-br w-[800px] h-[900px]  p-8 ">
+      <div className="w-full h-full max-w-6xl mx-auto b rounded-xl  overflow-hidden relative">
         <div className="flex flex-col md:flex-row ">
-          {/* Left side illustration */}
-          <div className="md:w-1/2 bg-blue-50 p-8 flex flex-col justify-center items-center">
-            <div className="relative w-full h-96">
-              {/* Abstract shapes with animations */}
-              <div className="absolute top-10 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-50 animate-pulse"></div>
-              <div className="absolute bottom-10 right-10 w-16 h-16 bg-blue-300 rounded-full opacity-50 animate-bounce"></div>
-              
-              {/* Main illustration with animations */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64">
-                <div className="absolute bottom-0 w-48 h-32 bg-blue-600 rounded-t-lg transform hover:scale-105 transition-transform"></div>
-                <div className="absolute bottom-0 w-64 h-2 bg-blue-800 rounded-full"></div>
-                
-                <div className="absolute top-0 left-4 w-16 h-16 bg-blue-400 rounded-full animate-bounce">
-                  <div className="absolute -top-8 w-8 h-8 bg-blue-400 rounded-full"></div>
-                </div>
-                <div className="absolute top-8 right-4 w-16 h-16 bg-blue-500 rounded-full animate-bounce delay-100">
-                  <div className="absolute -top-8 w-8 h-8 bg-blue-500 rounded-full"></div>
-                </div>
-                
-                <div className="absolute top-4 left-20 text-4xl text-blue-600 animate-pulse">{`{ }`}</div>
-                <div className="absolute bottom-40 right-4 text-3xl text-blue-500 animate-pulse delay-150">{`</>`}</div>
-              </div>
-            </div>
-            <h2 className="text-2xl font-bold text-blue-800 mt-4">Join Our Bootcamp</h2>
-            <p className="text-blue-600 mt-2 text-center">Learn, Code, Build, Succeed!</p>
-          </div>
+        
 
           {/* Right side form */}
-          <div className="md:w-1/2 p-6 bg-white">
-          <div className="text-center mb-6">
+          <div className="md:w-full p-6 ">
+          <div className="text-center mb-2">
       {/* Animated Main Title */}
-      <motion.h1
-        className="text-2xl font-bold text-gray-800 font-mono"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        Step of Learning Process
-      </motion.h1>
+    <h1 className='text-7xl font-semibold text-amber-950'>Step of Learning Process</h1>
 
       {/* Animated Subtext */}
       <motion.p
-        className="text-gray-600 mt-2 font-mono"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+        className="text-amber-950 mt-2 font-mono"
       >
         Bootcamp Registration
       </motion.p>
@@ -166,14 +131,15 @@ const BootcampForm = () => {
       <label className="block text-sm font-medium text-gray-700 mb-1">
         Full Name <span className="text-red-500">*</span>
       </label>
-      <input
+      <input 
         type="text"
         name="name"
         value={formData.name}
         onChange={handleChange}
         onBlur={() => handleBlur('name')}
         className={getInputClasses('name')}
-        placeholder="Enter your full name"
+        style={{height: '60px', background:"transparent", border:"1px solid black", outline:"none"}}
+        
         required
       />
       {touched.name && errors.name && (
@@ -186,14 +152,16 @@ const BootcampForm = () => {
       <label className="block text-sm font-medium text-gray-700 mb-1">
         Email Address <span className="text-red-500">*</span>
       </label>
-      <input
+      <input 
         type="email"
         name="email"
         value={formData.email}
         onChange={handleChange}
         onBlur={() => handleBlur('email')}
         className={getInputClasses('email')}
-        placeholder="Enter your email"
+        style={{height: '60px', background:"transparent", border:"1px solid black", outline:"none"}}
+
+       
         required
       />
       {touched.email && errors.email && (
@@ -203,20 +171,22 @@ const BootcampForm = () => {
 
     {/* Optional Fields */}
     <div className="space-y-4 pt-2">
-      <p className="text-sm text-gray-500 italic">Optional Information</p>
+      <p className="text-md  italic">Optional Information</p>
 
       {/* Phone Field */}
       <div className="transform transition-all duration-300 hover:-translate-y-1">
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Phone Number
         </label>
-        <input
+        <input 
           type="tel"
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          placeholder="Enter your phone number"
+          className="w-full p-2 border border-gray-300 rounded-md "
+          style={{height: '60px', background:"transparent", border:"1px solid black", outline:"none"}}
+
+          
         />
       </div>
 
@@ -225,13 +195,13 @@ const BootcampForm = () => {
         <label className="block text-sm font-medium text-gray-700 mb-1">
           University/College
         </label>
-        <input
+        <input 
           type="text"
           name="institution"
           value={formData.institution}
           onChange={handleChange}
-          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          placeholder="Enter your institution name"
+          className="w-full p-2 border border-gray-300 rounded-md"
+          style={{height: '60px', background:"transparent", border:"1px solid black", outline:"none"}}
         />
       </div>
 
@@ -240,13 +210,13 @@ const BootcampForm = () => {
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Profession
         </label>
-        <input
+        <input 
           type="text"
           name="profession"
           value={formData.profession}
           onChange={handleChange}
-          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          placeholder="Enter your profession"
+          className="w-full  p-2 border border-gray-300 rounded-md "
+          style={{height: '60px', background:"transparent", border:"1px solid black", outline:"none"}}
         />
       </div>
     </div>
@@ -255,11 +225,11 @@ const BootcampForm = () => {
     <button
       type="submit"
       disabled={!isFormValid}
-      className={`w-full p-2.5 rounded-md transition-all duration-300 transform
-        bg-blue-500 text-white
-        ${!isFormValid ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600 hover:-translate-y-1 animate-bounce'}
+      className={`absolute bottom-1 w-[50%] p-2.5 rounded-xl transition-all duration-300 transform
+        bg-amber-600 text-white
+        ${!isFormValid ? 'opacity-50 cursor-not-allowed' : 'hover:bg-amber-950 hover:-translate-y-1 animate-bounce'}
         ${isSubmitting ? 'animate-pulse' : ''}
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`}
+        focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2`}
     >
       {isSubmitting ? 'Submitting...' : 'Submit Registration'}
     </button>
@@ -273,3 +243,4 @@ const BootcampForm = () => {
 };
 
 export default BootcampForm;
+

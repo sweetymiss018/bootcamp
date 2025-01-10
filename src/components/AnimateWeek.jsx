@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import CountdownTimer from "./TimmerComponents";
 
 function AnimateWeek() {
   const blueBoxRef = useRef(null);
@@ -57,7 +58,9 @@ function AnimateWeek() {
   return (
     <div ref={parentRef} className="h-[80vh] w-full flex flex-col">
       <div className="counter-info h-[50%] w-full flex">
-        <div className="counter w-[50%] p-12">hello</div>
+        <div className="counter w-[50%] p-12">
+          <CountdownTimer/>
+        </div>
         <div className="info w-[50%] p-12">
           <h1 className="font-semibold text-5xl text-amber-950 ">
             To start a new career in Tech
