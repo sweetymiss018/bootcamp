@@ -98,7 +98,7 @@ function Video() {
           new path.
         </p>
       </div>
-      <div className="star-svg absolute lg:left-[41.4%] lg:top-[72%] sm:top-[80%]">
+      <div className="star-svg absolute lg:left-[41.4%] lg:top-[72%] sm:top-[80%]  xs-lg:h-[50px] xs-lg:w-[50px]">
       <svg
     version="1.1"
     id="Layer_1"

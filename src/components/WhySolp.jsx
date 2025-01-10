@@ -71,7 +71,7 @@ const WhyNodSection = () => {
                {/* State-of-the-art Tech Stack */}
 
           <div className=" bg-[#FFE5B4] p-9  h-[550px] w-[750px] lg:w-[800px] lg:h-[700px] md:w-full sm:w-full xs-lg:w-full flex flex-col justify-between">
-          <h3 className="mb-4 text-7xl font-semibold text-amber-950">State-of-the-art Tech Stack</h3>
+          <h3 className="mb-4 text-7xl font-semibold text-amber-950  xs-lg:text-5xl">State-of-the-art Tech Stack</h3>
             <div className="mb-6   mx-auto h-[250px] w-full flex items-center justify-center">
               <TechStackSvg />
             </div>
@@ -84,8 +84,8 @@ const WhyNodSection = () => {
           {/* Project Based Learning */}
 
           <div className=" bg-[#FFB6C1] p-9  h-[550px] w-[750px] flex flex-col lg:w-[800px] lg:h-[700px]  md:w-full sm:w-full xs-lg:w-full justify-between">
-            <h3 className="mb-4 text-7xl font-semibold text-amber-950">Project Based Learning</h3>
-              <div className="mb-6   mx-auto h-[250px] w-[250px] flex items-center justify-center bg-blue-400 ">
+            <h3 className="mb-4 text-7xl font-semibold text-amber-950 xs-lg:text-5xl">Project Based Learning</h3>
+              <div className="mb-6   mx-auto h-[250px] w-[250px] xs-lg:h-[150px] xs-lg:w-[150px] flex items-center justify-center bg-blue-400 ">
                 <svg className="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
@@ -103,8 +103,8 @@ const WhyNodSection = () => {
               {/* Accelerated Onsite Learning */}
           <div className=" ml-[90px]  bg-[#87CEEB] p-9  h-[600px] w-[750px]  flex flex-col lg:w-[800px] lg:h-[700px]   md:w-full sm:w-full xs-lg:w-full md:ml-0 sm:ml-0 xs-lg:ml-0 justify-between">
            
-            <h3 className=" mb-4 text-7xl font-semibold text-amber-950">Accelerated Onsite Learning</h3>
-              <div className="flex mx-auto mb-6 h-[250px] w-[250px] items-center justify-center  bg-orange-400 p-4">
+            <h3 className=" mb-4 text-7xl font-semibold text-amber-950 xs-lg:text-5xl">Accelerated Onsite Learning</h3>
+              <div className="flex mx-auto mb-6 h-[250px] w-[250px] xs-lg:h-[150px] xs-lg:w-[150px] items-center justify-center  bg-orange-400 p-4">
                 <svg className="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -119,8 +119,8 @@ const WhyNodSection = () => {
           {/* Get hired */}
           <div className=" bg-[#98D8C8] p-8 h-[600px] w-[860px] lg:w-[800px] lg:h-[700px]  md:w-full sm:w-full xs-lg:w-full flex flex-col justify-between">
             
-            <h3 className="mb-4 text-7xl font-semibold text-amber-950">Get hired</h3>
-              <div className="flex mx-auto mb-10 h-[250px] w-[250px] items-center justify-center  bg-green-400 p-4 ">
+            <h3 className="mb-4 text-7xl font-semibold text-amber-950 xs-lg:text-5xl">Get hired</h3>
+              <div className="flex mx-auto mb-10 h-[250px] w-[250px] xs-lg:h-[150px] xs-lg:w-[150px] items-center justify-center  bg-green-400 p-4 ">
                 <svg className="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>

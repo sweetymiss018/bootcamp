@@ -107,7 +107,7 @@ const BootcampForm = () => {
   };
 
   return (
-    <div className=" bg-gradient-to-br w-[800px] h-[1200px]  p-8 ">
+    <div className=" bg-gradient-to-br w-[800px] h-[1200px]  p-8  flex justify-center items-center">
       <div className="w-full h-full max-w-6xl mx-auto b rounded-xl  overflow-hidden relative">
         <div className="flex flex-col md:flex-row ">
         
@@ -116,7 +116,7 @@ const BootcampForm = () => {
           <div className="md:w-full p-6 ">
           <div className="text-center mb-2">
       {/* Animated Main Title */}
-    <h1 className='text-7xl font-semibold text-amber-950'>Step of Learning Process</h1>
+    <h1 className='text-7xl font-semibold text-amber-950 md:text-5xl xs-lg:text-5xl'>Step of Learning Process</h1>
 
       {/* Animated Subtext */}
       <motion.p

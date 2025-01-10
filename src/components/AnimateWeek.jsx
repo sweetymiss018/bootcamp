@@ -75,7 +75,7 @@ function AnimateWeek() {
         </div>
       </div>
 
-      <div className="relative blue-div pl-10 pr-10 sm:pl-5 sm:pr-5 xs-lg:pl-2 xs-lg:pr-2 h-[50%]  w-full flex overflow-hidden">
+      <div className="relative blue-div pl-10 pr-10 sm:pl-5 sm:pr-5 xs-lg:pl-2 xs-lg:hidden lg:h-[50%]  w-full flex overflow-hidden">
         <div
           ref={blueBoxRef}
           className="absolute blue-box h-[50%] w-[50%] lg:h-[50%] lg:w-[50%] md:h-[30%] md:w-[50%] sm:h-[20%] sm:w-[50%] xs-lg:h-[50px] bg-blue-500 bottom-0 flex justify-center"

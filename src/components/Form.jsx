@@ -48,7 +48,7 @@ function Form() {
         style={{ borderBottomLeftRadius: "150px" }}
       >
        
-        <div className="form relative h-full w-[55%]  flex justify-center items-center sm:h-[50%] xs-lg:h-[60%] sm:w-full xs-lg:w-full md:h-full lg:h-full md:top-[30px] sm:top-[30px] xs-lg:top-[30px] lg:top-[30px]">
+        <div className="form relative h-full w-[55%]  flex justify-center items-center sm:h-[50%] xs-lg:h-[60%] sm:w-full xs-lg:w-full md:h-full lg:h-full md:top-[30px] sm:top-[30px] xs-lg:top-[140px] lg:top-[180px]">
           <BootcampForm/>
         </div>
         <div  ref={svgDivRef} className="svg h-full w-[45%] flex justify-end  lg:w-[45%]  sm:h-[50%] xs-lg:h-[40%] sm:w-full xs-lg:w-full md:h-full lg:h-full sm:mb-4 xs-lg:mb-4 ">
