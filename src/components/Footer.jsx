@@ -10,7 +10,6 @@ function Footer() {
       const textEl = textRef.current;
       const arrowEl = arrowRef.current;
       
-      // Create a timeline for the bobble animation
       const tl = gsap.timeline({ paused: true });
       
       tl.to(textEl, {
@@ -24,9 +23,7 @@ function Footer() {
       });
 
       const handleMouseEnter = () => {
-        // Animate the arrow
         gsap.to(arrowEl, { x: 15, duration: 0.3, ease: 'power2.out' });
-        // Play the bobble animation
         tl.restart();
       };
 
@@ -42,11 +39,11 @@ function Footer() {
         textEl.removeEventListener('mouseleave', handleMouseLeave);
       };
     }, []);
+
   return (
-    <div className='h-[60vh] w-full flex justify-center relative overflow-hidden' >
-        
-        <div className="o-letter-flower w-[70%] absolute bottom-0 flex rotate-[160deg]">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" className="w-full h-full relative  -top-[250px] opacity-50 ">
+    <div className='min-h-[60vh] w-full flex justify-center relative overflow-hidden'>
+        <div className="o-letter-flower w-full md:w-[70%] absolute bottom-0 flex rotate-[160deg]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" className="w-full h-full relative -top-[250px] opacity-50">
             <defs>
               <clipPath id="__lottie_element_55">
                 <rect width="500" height="330" x="0" y="0" />
@@ -65,40 +62,42 @@ function Footer() {
               </g>
             </g>
           </svg>
-     
         </div>
+        
         <div
-      className="footer-box w-[95%] h-full flex flex-col bg-transparent absolute"
-      style={{ borderTop: '12px solid #3a1502' }}
-    >
-      <div
-        className="top-content h-[90%] w-full flex"
-        style={{ borderBottom: '1px solid #3a1502' }}
-      >
-        <div className="left w-[45%] h-[100%] flex justify-center flex-col">
-          <h1 className="text-8xl font-semibold text-amber-950 relative -top-10 left-6">
-            Questions?
-          </h1>
-          <p className="font-semibold text-4xl relative left-6 -top-4 text-amber-950">
-            Do you love what we do and want to help us revolutionize teaching and
-            change how people learn to code?
-          </p>
-        </div>
-        <div className="right w-[55%] h-[100%] flex justify-center items-center relative left-[90px]">
-          <h1
-            ref={textRef}
-            className="h-fit text-8xl font-semibold text-amber-950 flex items-center gap-3 cursor-pointer"
+          className="footer-box w-[95%] h-full flex flex-col bg-transparent absolute"
+          style={{ borderTop: '12px solid #3a1502' }}
+        >
+          <div
+            className="top-content min-h-[90%] w-full flex flex-col lg:flex-row"
+            style={{ borderBottom: '1px solid #3a1502' }}
           >
-            Get in touch
-            <FaArrowRight ref={arrowRef} className="relative top-3" />
-          </h1>
+            <div className="left w-full lg:w-[45%] h-full flex justify-center flex-col p-4 lg:p-0">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-semibold text-amber-950 relative lg:-top-10 lg:left-6">
+                Questions?
+              </h1>
+              <p className="font-semibold text-xl md:text-2xl lg:text-4xl relative lg:left-6 lg:-top-4 text-amber-950 mt-4 lg:mt-0">
+                Do you love what we do and want to help us revolutionize teaching and
+                change how people learn to code?
+              </p>
+            </div>
+            
+            <div className="right w-full lg:w-[55%] h-full flex justify-center items-center lg:relative lg:left-[90px] py-8 lg:py-0">
+              <h1
+                ref={textRef}
+                className="h-fit text-4xl md:text-6xl lg:text-8xl font-semibold text-amber-950 flex items-center gap-3 cursor-pointer"
+              >
+                Get in touch
+                <FaArrowRight ref={arrowRef} className="relative top-1 lg:top-3" />
+              </h1>
+            </div>
+          </div>
+          
+          <div className="bottom-content h-[10%] w-full relative z-[30] p-4">
+            youtube
+          </div>
         </div>
-      </div>
-      <div className="bottom-content h-[10%] w-full relative z-[30]">youtube</div>
     </div>
-    </div>
-      
-    
   )
 }
 
