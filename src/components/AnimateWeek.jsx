@@ -56,7 +56,7 @@ function AnimateWeek() {
   }, []);
 
   return (
-    <div ref={parentRef} className="h-[80vh] w-full flex flex-col lg:h-[80vh] md:h-[100vh] sm:h-[100vh] xs-lg:h-[100vh]">
+    <div ref={parentRef} className="h-[80vh] w-full flex flex-col lg:h-[100vh] md:h-[100vh] sm:h-[100vh] xs-lg:h-[100vh]">
       <div className="counter-info h-[50%] w-full  flex lg:flex-row md:flex-col sm:flex-col xs-lg:flex-col ">
         <div className="counter w-[50%] p-12 lg:w-[50%] md:w-full sm:w-full xs-lg:w-full">
           <CountdownTimer/>
