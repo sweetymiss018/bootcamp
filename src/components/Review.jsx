@@ -14,7 +14,7 @@ const ReviewHorizontalScroll = () => {
         await controls.start({
           x: -totalWidth,
           transition: {
-            duration: testimonials.length * 5, // 5 seconds per testimonial
+            duration: testimonials.length * 4, // 5 seconds per testimonial
             ease: "linear",
             repeat: Infinity,
           },
@@ -26,14 +26,14 @@ const ReviewHorizontalScroll = () => {
   }, [controls, totalWidth]);
 
   return (
-    <div className="bg-gray-50 min-h-screen py-12 px-4">
+    <div className="bg-[#FFFFFF] lg:min-h-screen md:min-h-[80vh] sm:min-h-[60vh] min-h-[50h] py-12 px-4">
       {/* Header */}
       {/* Animated Header */}
       <div className="relative overflow-hidden mb-20">
         <div className="flex whitespace-nowrap">
           <motion.div
             animate={{
-              x: [0, -4000],
+              x: [0, -2000],
             }}
             transition={{
               x: {
@@ -46,6 +46,12 @@ const ReviewHorizontalScroll = () => {
             className="flex items-center gap-7 font-bold"
           >
             {/* Responsive Text Sizes */}
+            <span className="text-[2rem] sm:text-[4rem] md:text-[6rem] lg:text-[8rem]">
+              Graduate Success Stories
+            </span>
+            <span className="text-emerald-400 text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem]">
+              *
+            </span>
             <span className="text-[2rem] sm:text-[4rem] md:text-[6rem] lg:text-[8rem]">
               Graduate Success Stories
             </span>

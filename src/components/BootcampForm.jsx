@@ -88,14 +88,38 @@ const BootcampForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
     if (validateForm()) {
       setIsSubmitting(true);
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      alert("Registration submitted successfully!");
-      setIsSubmitting(false);
+  
+      try {
+        const response = await fetch("/api/addStudent", {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          body: JSON.stringify(formData), // Serialize formData into JSON
+        });
+  
+        if (!response.ok) {
+          // Handle HTTP errors
+          const errorData = await response.json();
+          throw new Error(errorData.message || "Something went wrong!");
+        }
+  
+        // Success
+        alert("Registration submitted successfully!");
+      } catch (error) {
+        // Log and notify error
+        console.error("Error submitting the form:", error);
+        alert(`Error: ${error.message}`);
+      } finally {
+        setIsSubmitting(false); // Reset submitting state
+      }
     }
   };
+  
 
   const getInputClasses = (fieldName) => {
     const baseClasses =
