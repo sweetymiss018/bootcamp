@@ -72,7 +72,7 @@ const TestimonialSlider = () => {
               <div className="ml-4">
                 <p className="font-medium text-gray-900">{testimonial.name}</p>
                 <p className="text-sm text-gray-600">{testimonial.batch}</p>
-                <p className="text-sm text-gray-500">{testimonial.role}</p>
+                {/* <p className="text-sm text-gray-500">{testimonial.role}</p> */}
               </div>
             </motion.div>
             <motion.div 
@@ -124,7 +124,7 @@ const TestimonialSlider = () => {
               <div className="ml-4">
                 <p className="font-medium text-gray-900">{testimonial.name}</p>
                 <p className="text-sm text-gray-600">{testimonial.batch}</p>
-                <p className="text-sm text-gray-500">{testimonial.role}</p>
+                {/* <p className="text-sm text-gray-500">{testimonial.role}</p> */}
               </div>
             </motion.div>
             <motion.div 
