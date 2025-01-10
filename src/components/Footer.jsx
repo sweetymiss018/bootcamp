@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { FaArrowRight } from "react-icons/fa6";
 import { gsap } from 'gsap';
+import { BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs';
 
 function Footer() {
     const textRef = useRef(null);
@@ -69,7 +70,7 @@ function Footer() {
           style={{ borderTop: '12px solid #3a1502' }}
         >
           <div
-            className="top-content min-h-[90%] w-full flex flex-col lg:flex-row"
+            className="top-content min-h-[85%] w-full flex flex-col lg:flex-row"
             style={{ borderBottom: '1px solid #3a1502' }}
           >
             <div className="left w-full lg:w-[45%] h-full flex justify-center flex-col p-4 lg:p-0">
@@ -93,8 +94,15 @@ function Footer() {
             </div>
           </div>
           
-          <div className="bottom-content h-[10%] w-full relative z-[30] p-4">
-            youtube
+          <div className="bottom-content text-2xl text-amber-950  h-[15%] flex justify-between   gap-3 w-full relative z-[30] p-4">
+           <div className='flex gap-3'> <BsYoutube/>
+            <BsInstagram/>
+            <BsLinkedin/></div>
+            <div className='h-full flex items-center'>
+            <p className="sm:mt-0  text-center sm:text-right text-sm font-semibold">
+          © {new Date().getFullYear()} SOLP All rights reserved.
+        </p>
+            </div>
           </div>
         </div>
     </div>

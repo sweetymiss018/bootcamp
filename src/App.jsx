@@ -9,18 +9,16 @@ import WhySolp from "./components/WhySolp";
 
 export default function App() {
   return (
-    <>
-    <CodingAnimation/>
-    
-    <AnimatedWeekCounter/>
-    <Video/>
-      {/* <WhySolp /> */}
+    <div className="overflow-x-hidden">
+      <CodingAnimation />
+
+      <AnimatedWeekCounter />
+      <Video />
       <Review />
-      <WhySolp/>
-     
-      <Form/>
-      <Footer/>
-    
-    </>
-  )
+      <WhySolp />
+
+      <Form />
+      <Footer />
+    </div>
+  );
 }
