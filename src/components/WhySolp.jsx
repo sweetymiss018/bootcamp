@@ -138,12 +138,7 @@ const WhyNodSection = () => {
         
         </div>
 
-        {/* Apply Now Button */}
-        <div className="mt-12 text-center">
-          <button className="rounded-full bg-[#FFB6C1] px-8 py-3 text-lg font-semibold text-gray-800 hover:bg-[#FFA6B1] transition-colors">
-            Apply Now
-          </button>
-        </div>
+ 
       </div>
     </div>
   );
