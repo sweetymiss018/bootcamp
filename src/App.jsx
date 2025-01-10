@@ -1,4 +1,5 @@
 import AnimatedWeekCounter from "./components/AnimateWeek";
+import BootcampLogo from "./components/bootcampLogo";
 import CodingAnimation from "./components/CodingAnimation";
 import Form from "./components/Form";
 import Review from "./components/Review";
@@ -9,6 +10,7 @@ export default function App() {
   return (
     <>
     <CodingAnimation/>
+    <BootcampLogo/>
     <AnimatedWeekCounter/>
     <Video/>
       {/* <WhySolp /> */}
