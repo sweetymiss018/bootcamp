@@ -293,7 +293,7 @@ const BootcampForm = () => {
             : "hover:bg-amber-950 hover:-translate-y-1 animate-bounce"
         }
         ${isSubmitting ? "animate-pulse" : ""}
-        focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 `}
+        focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 xs-lg:w-[84%] `}
               >
                 {isSubmitting ? "Submitting..." : "Submit Registration"}
               </button>

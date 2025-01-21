@@ -44,14 +44,14 @@ function Form() {
   return (
     <div   ref={parentDivRef}  className="h-[150vh] w-full flex  items-center justify-end sm:h-[150vh] xs-lg:h-[190vh] md:h-[150vh] lg:h-[150vh]">
       <div
-        className="yellow-div w-[89%] h-[98%] bg-[#FFD37D] flex lg:w-[89%] lg:h-[80%] md:w-[89%] md:h-[80%] sm:flex-col xs-lg:flex-col md:flex-row lg:flex-row sm:w-full xs-lg:w-full "
-        style={{ borderBottomLeftRadius: "150px" }}
+        className="yellow-div w-[89%] h-[98%] bg-[#FFD37D] flex lg:w-[89%] lg:h-[80%] md:w-[89%] md:h-[80%] xs-lg:h-[100%] sm:flex-col xs-lg:flex-col md:flex-row lg:flex-row sm:w-full xs-lg:w-full "
+        style={{ borderBottomLeftRadius: "178px" }}
       >
        
         <div className="form relative h-full w-[55%]  flex justify-center items-center sm:h-[50%] xs-lg:h-[60%] sm:w-full xs-lg:w-full md:h-full lg:h-full md:top-[30px] sm:top-[30px] xs-lg:top-[140px] lg:top-[180px]">
           <BootcampForm/>
         </div>
-        <div  ref={svgDivRef} className="svg h-full w-[45%] flex justify-end  lg:w-[45%]  sm:h-[50%] xs-lg:h-[40%] sm:w-full xs-lg:w-full md:h-full lg:h-full sm:mb-4 xs-lg:mb-4 ">
+        <div  ref={svgDivRef} className="svg h-full w-[45%] flex justify-end  lg:w-[45%]  sm:h-[50%] xs-lg:h-[40%] sm:w-full xs-lg:w-full md:h-full lg:h-full sm:mb-4 xs-lg:mb-1 relative xs-lg:-bottom-20 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"

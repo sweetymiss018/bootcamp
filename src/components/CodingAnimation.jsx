@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import BootcampLogo from './bootcampLogo';
+import AnimatedGrass from './AnimatedGrass';
 
 export default function CodingAnimation() {
   useEffect(() => {
@@ -11,6 +12,17 @@ export default function CodingAnimation() {
     script.onload = () => {
       const gsap = window.gsap;
       const flowers = document.querySelector(".flowers");
+      const grass = document.querySelector(".grass");
+
+      gsap.fromTo(grass, {
+        y:200,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 4,
+        ease:"power1.in"
+      })
 
       gsap.fromTo(flowers, {
         y: 400,
@@ -366,6 +378,9 @@ export default function CodingAnimation() {
       </div>
       <div className="bootcamp absolute bottom-[100px]  right-5">
         <BootcampLogo/>
+      </div>
+      <div className="grass absolute bottom-0 z-[999999999]  h-[470px] lg:h-[420px] md:h-[190px] sm:h-[150px]  xs-lg:h-[90px] w-full">
+        <AnimatedGrass/>
       </div>
     </div>
   );
