@@ -42,7 +42,7 @@ app.post('/api/register', validateRegistration, async (req, res) => {
     // Append data to Google Sheet
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: 'Students!A:G', // A to G columns
+      range: 'CodeCraft_Bootcamp!A:G', // A to G columns
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[
@@ -99,7 +99,7 @@ app.get('/api/registrations', async (req, res) => {
   try {
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: 'Students!A:G',
+      range: 'CodeCraft_Bootcamp!A:G',
     });
 
     const rows = response.data.values;

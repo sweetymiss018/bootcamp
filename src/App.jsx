@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className="overflow-x-hidden">
       <CodingAnimation />
-      <StudentList/>
+      {/* <StudentList/> */}
 
       <AnimatedWeekCounter />
       <Video />

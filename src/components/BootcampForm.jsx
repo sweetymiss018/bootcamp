@@ -86,6 +86,55 @@ const BootcampForm = () => {
     }));
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (validateForm()) {
+  //     setIsSubmitting(true);
+  //     try {
+  //       // Replace with your Google Apps Script URL
+  //       const GOOGLE_SHEETS_URL = 'https://docs.google.com/spreadsheets/d/1XRLCgdrN0IH2VGEQ_dlRrUVC_YUThxAJARe4wm0vVzY/edit?gid=0#gid=0';
+        
+  //       const response = await fetch(GOOGLE_SHEETS_URL, {
+  //         method: 'POST',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify(formData)
+  //       });
+
+  //       const result = await response.json();
+        
+  //       if (result.status === 'success') {
+  //         alert('Registration submitted successfully!');
+  //         // Clear form
+  //         setFormData({
+  //           name: "",
+  //           email: "",
+  //           phone: "",
+  //           institution: "",
+  //           profession: "",
+  //         });
+  //         setTouched({
+  //           name: false,
+  //           email: false,
+  //           phone: false,
+  //           institution: false,
+  //           profession: false,
+  //         });
+  //       } else {
+  //         throw new Error('Submission failed');
+  //       }
+  //     } catch (error) {
+  //       alert('There was an error submitting your registration. Please try again.');
+  //       console.error('Submission error:', error);
+  //     } finally {
+  //       setIsSubmitting(false);
+  //     }
+  //   }
+  // };
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
   
@@ -93,7 +142,7 @@ const BootcampForm = () => {
       setIsSubmitting(true);
   
       try {
-        const response = await fetch("/api/addStudent", {
+        const response = await fetch("/api/register", {
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
@@ -119,6 +168,7 @@ const BootcampForm = () => {
       }
     }
   };
+
   
 
   const getInputClasses = (fieldName) => {
