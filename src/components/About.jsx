@@ -104,14 +104,14 @@ const ConnectedCards = () => {
             }}
           >
             {/* Back card (hidden initially) */}
-            <div className="absolute inset-0 bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex flex-col justify-between p-5">
-              <h3 className="text-[3vw] font-semibold">{card.backCard.title}</h3>
-              <p className="text-[1.5vw]">{card.backCard.description}</p>
+            <div className="absolute inset-0 bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex flex-col justify-between p-8">
+              <h3 className="text-[3vw] xs-lg:text-[7vw] font-semibold">{card.backCard.title}</h3>
+              <p className="text-[1.5vw] xs-lg:text-[3vw]">{card.backCard.description}</p>
             </div>
 
             {/* Front card */}
-            <h3 className="text-[3.5vw] font-semibold">{card.title}</h3>
-            <p className="text-[2vw]">{card.description}</p>
+            <h3 className="text-[3.5vw] xs-lg:text-[7vw] font-semibold">{card.title}</h3>
+            <p className="text-[2vw] xs-lg:text-[3vw]">{card.description}</p>
             <ArrowRight className="h-6 w-6 md:h-6 md:w-6 sm:h-3 sm:w-3 xs-lg:h-4 xs-lg:w-4 absolute bottom-[5%] hover:hidden" />
           </div>
         ))}
