@@ -93,7 +93,7 @@ const BootcampForm = () => {
       setIsSubmitting(true);
   
       try {
-        const response = await fetch("/api/addStudent", {
+        const response = await fetch("/api/register", {
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
