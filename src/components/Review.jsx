@@ -26,7 +26,7 @@ const ReviewHorizontalScroll = () => {
   }, [controls, totalWidth]);
 
   return (
-    <div className="bg-[#FFFFFF] lg:min-h-screen md:min-h-[80vh] sm:min-h-[60vh] min-h-[50h] py-12 px-4">
+    <div className="bg-[#FFFFFF] xs:mt-[180px] lg:min-h-screen md:min-h-[90vh] sm:min-h-[60vh] xs-lg:h-[90vh] min-h-[50h] py-12 px-4">
       {/* Header */}
       {/* Animated Header */}
       <div className="relative overflow-hidden mb-20">

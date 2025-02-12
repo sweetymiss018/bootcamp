@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import video from "../assets/video.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Video() {
   const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -59,17 +59,17 @@ function Video() {
     }
   }, []);
 
-  const togglePlayPause = () => {
-    const video = videoRef.current;
-    if (video) {
-      if (isPlaying) {
-        video.pause();
-      } else {
-        video.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
+  // const togglePlayPause = () => {
+  //   const video = videoRef.current;
+  //   if (video) {
+  //     if (isPlaying) {
+  //       video.pause();
+  //     } else {
+  //       video.play();
+  //     }
+  //     setIsPlaying(!isPlaying);
+  //   }
+  // };
 
   return (
     <div className=" relative h-[100vh] xs-lg:h-[80vh] w-full flex lg:flex lg:flex-row md:flex-col sm:flex-col xs-lg:flex-col md:justify-center lg:justify-center sm:justify-center xs-lg:justify-center">
@@ -77,18 +77,17 @@ function Video() {
         <div className="box w-full h-[90%] md:h-[90%] sm:h-[60%] xs-lg:h-[100%] bg-[#FFD37D] flex justify-center items-center">
           <div
             ref={videoRef}
-            className="video-container w-[75%] h-[75%] relative border border-black rounded-lg overflow-hidden"
+            className="video-container w-[80%] h-[47.9%] xs-lg:w-[68%] md:w-[73%] relative  rounded-lg overflow-hidden"
           >
-            <video
-              src="#"
-              className="video h-[100%] w-full"
-            ></video>
-            <button
-              onClick={togglePlayPause}
-              className="bg-blue-600 hover:bg-blue-700 font-bold h-[100px] w-[100px] rounded-full absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white text-2xl"
-            >
-              {isPlaying ? "Pause" : "Play"}
-            </button>
+           <video
+              src={video}
+              autoPlay
+              muted  // Add muted attribute
+              playsInline // Add playsInline for iOS
+              loop
+              className="video h-[100%] w-full object-contain "
+            />
+            
           </div>
         </div>
       </div>

@@ -91,7 +91,7 @@ const WhyNodSection = () => {
   return (
     <div
       ref={containerRef}
-      className="relative h-[250vh] w-full overflow-hidden  flex  justify-center lg:h-[300vh] md:h-[320vh] sm:h-[380vh] xs-lg:h-[300vh]   flex-col "
+      className="relative h-[100vh] w-full overflow-hidden  flex  justify-center lg:h-[300vh] md:h-[320vh] sm:h-[380vh] xs-lg:h-[300vh]   flex-col "
     >
       {/* Background Text */}
 
@@ -110,7 +110,7 @@ const WhyNodSection = () => {
             {/* State-of-the-art Tech Stack */}
 
             <div className=" bg-[#FFE5B4] p-9  h-[550px] w-[750px] lg:w-[800px] lg:h-[600px] md:w-full sm:w-full xs-lg:w-full flex flex-col justify-between">
-              <h3 className="mb-4 text-6xl font-semibold text-amber-950  xs-lg:text-5xl">
+              <h3 className="mb-4 text-6xl font-semibold text-amber-950  xs-lg:text-4xl">
                 State-of-the-art Tech Stack
               </h3>
               <div className="mb-6   mx-auto h-[250px] w-full flex items-center justify-center">
@@ -126,7 +126,7 @@ const WhyNodSection = () => {
             {/* Project Based Learning */}
 
             <div className=" bg-[#FFB6C1] p-9  h-[550px] w-[750px] flex flex-col lg:w-[800px] lg:h-[600px]  md:w-full sm:w-full xs-lg:w-full justify-between">
-              <h3 className="mb-4 text-6xl font-semibold text-amber-950 xs-lg:text-5xl">
+              <h3 className="mb-4 text-6xl font-semibold text-amber-950 xs-lg:text-4xl">
                 Project Based Learning
               </h3>
               <div className="mb-6   mx-auto h-[250px] w-[250px] xs-lg:h-[150px] xs-lg:w-[150px] flex items-center justify-center bg-blue-400 ">
@@ -155,7 +155,7 @@ const WhyNodSection = () => {
           <div className="relative second-stack flex justify-center w-full lg:left-[40px]  h-fit lg:flex-row md:flex-col sm:flex-col xs-lg:flex-col ">
             {/* Accelerated Onsite Learning */}
             <div className=" ml-[90px]  bg-[#87CEEB] p-9  h-[600px] w-[750px]  flex flex-col lg:w-[800px] lg:h-[600px]   md:w-full sm:w-full xs-lg:w-full md:ml-0 sm:ml-0 xs-lg:ml-0 justify-between">
-              <h3 className=" mb-4 text-6xl font-semibold text-amber-950 xs-lg:text-5xl">
+              <h3 className=" mb-4 text-6xl font-semibold text-amber-950 xs-lg:text-4xl">
                 Accelerated Onsite Learning
               </h3>
               <div className="flex mx-auto mb-6 h-[250px] w-[250px] xs-lg:h-[150px] xs-lg:w-[150px] items-center justify-center  bg-orange-400 p-4">
@@ -183,7 +183,7 @@ const WhyNodSection = () => {
 
             {/* Get hired */}
             <div className=" bg-[#98D8C8] p-8 h-[600px] w-[860px] lg:w-[800px] lg:h-[600px]  md:w-full sm:w-full xs-lg:w-full flex flex-col justify-between">
-              <h3 className="mb-4 text-6xl font-semibold text-amber-950 xs-lg:text-5xl">
+              <h3 className="mb-4 text-6xl font-semibold text-amber-950 xs-lg:text-4xl">
                 Get hired
               </h3>
               <div className="flex mx-auto mb-10 h-[250px] w-[250px] xs-lg:h-[150px] xs-lg:w-[150px] items-center justify-center  bg-green-400 p-4 ">
