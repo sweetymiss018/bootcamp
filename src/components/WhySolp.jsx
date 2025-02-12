@@ -91,7 +91,7 @@ const WhyNodSection = () => {
   return (
     <div
       ref={containerRef}
-      className="relative h-[250vh] w-full overflow-hidden  flex  justify-center lg:h-[300vh] md:h-[320vh] sm:h-[380vh] xs-lg:h-[350vh]   flex-col "
+      className="relative h-[100vh] w-full overflow-hidden  flex  justify-center lg:h-[300vh] md:h-[320vh] sm:h-[380vh] xs-lg:h-[300vh]   flex-col "
     >
       {/* Background Text */}
 

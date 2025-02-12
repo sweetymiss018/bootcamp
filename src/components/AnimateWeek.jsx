@@ -56,7 +56,7 @@ function AnimateWeek() {
   }, []);
 
   return (
-    <div ref={parentRef} className="h-[80vh] w-full flex flex-col lg:h-[100vh] md:h-[100vh] sm:h-[100vh] xs-lg:h-[100vh]">
+    <div ref={parentRef} className="h-[80vh] w-full flex flex-col lg:h-[100vh] md:h-[100vh] sm:h-[100vh] xs-lg:h-[95vh]">
       <div className="counter-info h-[50%] w-full  flex lg:flex-row md:flex-col sm:flex-col xs-lg:flex-col ">
         <div className="counter w-[50%] p-12 lg:w-[50%] md:w-full sm:w-full xs-lg:w-full">
           <CountdownTimer/>
@@ -66,16 +66,12 @@ function AnimateWeek() {
             To start a new career in Tech
           </h1>
           <p className="mt-2 text-[28px] text-zinc-500 md:text-[24px] sm:text-[10px] xs-lg:text-[18px]">
-            to start a new career in Tech Unlock the door to the future with
-            hands-on skills in Python, the most user-friendly and versatile
-            programming language. Build projects in Data Analytics, Machine
-            Learning, and Generative AI. Take your first step to make a change
-            and apply today.
+          Join our cutting-edge study platform where we provide in-depth Full Stack Web Development training. Elevate your skills with our expert-led Bootcamp, where we teach students how to create stunning animations using Three.js. Whether you're a beginner or an experienced developer, our hands-on approach ensures you master modern web technologies with ease!
           </p>
         </div>
       </div>
 
-      <div className="relative blue-div pl-10 pr-10 sm:pl-5 sm:pr-5 xs-lg:pl-2 xs-lg:hidden lg:h-[50%]  w-full flex overflow-hidden">
+      <div className="relative xs:top-[80px] md:top-[100px] blue-div pl-10 pr-10 sm:pl-5 sm:pr-5 xs-lg:pl-2 xs-lg:hidden lg:h-[50%]  w-full flex overflow-hidden">
         <div
           ref={blueBoxRef}
           className="absolute blue-box h-[50%] w-[50%] lg:h-[50%] lg:w-[50%] md:h-[30%] md:w-[50%] sm:h-[20%] sm:w-[50%] xs-lg:h-[50px] bg-blue-500 bottom-0 flex justify-center"
