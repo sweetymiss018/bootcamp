@@ -83,7 +83,7 @@ const ConnectedCards = () => {
   ];
 
   return (
-    <div ref={containerRef} className="relative h-[200vh] xs-lg:h-[130vh] w-full p-8 ">
+    <div ref={containerRef} className="relative h-[190vh] xs-lg:h-[130vh] w-full p-8 ">
       <div className="relative lg:left-1 md:left-3 sm:left-0">
         {cards.map((card, index) => (
           <div
@@ -94,25 +94,25 @@ const ConnectedCards = () => {
               transform: `translate(${
                 window.innerWidth >= 300 && window.innerWidth <= 548
                   ? 0
-                  : index * (window.innerWidth < 640 ? 100 : window.innerWidth < 768 ? 150 : 350)
+                  : index * (window.innerWidth < 640 ? 100 : window.innerWidth < 768 ? 150 : 320)
               }px, ${
                 window.innerWidth < 640
                   ? index * 250 // Create gap between cards in column layout for small screens
-                  : index * (window.innerWidth < 768 ? 280 : 410)
+                  : index * (window.innerWidth < 768 ? 280 : 350)
               }px)`,
               zIndex: cards.length - index, // Ensures top cards appear above others
             }}
           >
             {/* Back card (hidden initially) */}
             <div className="absolute inset-0 bg-gray-600 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg flex flex-col justify-between p-8">
-              <h3 className="text-[3vw] xs-lg:text-[7vw] font-semibold">{card.backCard.title}</h3>
-              <p className="text-[1.5vw] xs-lg:text-[3vw]">{card.backCard.description}</p>
+              <h3 className="text-[2vw] xs-lg:text-[7vw] font-semibold">{card.backCard.title}</h3>
+              <p className="text-[1.2vw] xs-lg:text-[3vw] mb-2 text-gray-300">{card.backCard.description}</p>
             </div>
 
             {/* Front card */}
             <h3 className="text-[3.5vw] xs-lg:text-[7vw] font-semibold">{card.title}</h3>
-            <p className="text-[2vw] xs-lg:text-[3vw]">{card.description}</p>
-            <ArrowRight className="h-6 w-6 md:h-6 md:w-6 sm:h-3 sm:w-3 xs-lg:h-4 xs-lg:w-4 absolute bottom-[5%] hover:hidden" />
+            <p className="text-[2vw] xs-lg:text-[3vw] text-gray-300">{card.description}</p>
+            <ArrowRight className="h-6 w-6 md:h-6 md:w-6 sm:h-3 sm:w-3 xs-lg:h-4 xs-lg:w-4 absolute bottom-[5%] " />
           </div>
         ))}
       </div>
